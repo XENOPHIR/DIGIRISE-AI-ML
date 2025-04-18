@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "MYSQL-WORLD",
+      "driver": "MySQL",
+      "server": "127.0.0.1",
+      "port": 3306,
+      "username": "root",
+      "password": "4444",
+      "database": "world"
+    }
+  ]
+}

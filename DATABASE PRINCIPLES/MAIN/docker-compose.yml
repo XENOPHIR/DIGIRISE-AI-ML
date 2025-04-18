@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    container_name: mysql-lab
+    environment:
+      MYSQL_ROOT_PASSWORD: 4444
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./world.sql:/docker-entrypoint-initdb.d/world.sql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: 4444
